@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  
+</body>
+</html>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <header class="py-5 shadow-md">
+      <div class="container w-[1200px] mx-auto flex items-center justify-between">
+        <a class="font-bold text-[30px]" href="/">Countries</a>
+        <div class="flex items-center gap-5">
+          <button
+            class="w-[50px] h-[50px] border-[2px] border-black text-black-400 rounded-[50%] flex items-center justify-center "
+          >
+            0
+            <img 
+              src="./images/like-svg.svg"
+              alt="like-svg"
+              width="25"
+              height="25"
+            />
+          </button>
+          <button
+            class=" w-[50px] h-[50px] border-[2px] border-black text-black-400 rounded-[50%] flex items-center justify-center"
+          >
+            0
+            <img
+              src="./images/basket.svg"
+              alt="like-svg"
+              width="25"
+              height="25"
+            />
+          </button>
+          <button 
+            class="w-[50px] h-[50px] border-[2px] border-black text-black-400 rounded-[50%] flex items-center justify-center"
+          >
+            <img 
+              src="./images/moon.svg"
+              alt="like-svg"
+              width="50"
+              height="50"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="py-5">
+        <div class="container w-[1200px] mx-auto">
+          <div class="flex items-center justify-between">
+            <input
+              class="p-3 rounded-[10px] border-[1px] w-[250px] border-slate-500"
+              type="text"
+              placeholder="Searching..."
+            />
+            <select
+              class="p-3 rounded-[10px] border-[1px] w-[250px] border-slate-500"
+            >
+              <option>All</option>
+              <option value="Wallis and Futuna">Wallis and Futuna</option>
+              <option value="Iceland">Iceland</option>
+              <option value="Luxemburg">Luxemburg</option>
+              <option value="Mali">Mali</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Australia">Australia</option>
+              <option value="Estoniya">Estoniya</option>
+              <option value="Canada">Canada</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Guyana">Guyana</option>
+            </select>
+          </div>
+          <ul class="countries-list flex flex-wrap gap-10 mt-10"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/countrys.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>
