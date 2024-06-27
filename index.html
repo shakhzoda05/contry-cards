@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -91,6 +91,99 @@
 
     <script src="./js/countrys.js"></script>
     <script src="./js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries</title>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="py-5 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <a class="font-bold text-[30px]" href="/">Countries</a>
+        <div class="flex items-center gap-10">
+          <button
+            class="w-[50px] h-[50px] border-[2px] border-red-400 text-red-400 rounded-[50%] flex items-center justify-center"
+          >
+            0
+            <img
+              src="./images/like.svg"
+              alt="Heart icon"
+              width="25"
+              height="25"
+            />
+          </button>
+          <button
+            class="w-[50px] h-[50px] border-[2px] border-green-400 text-green-400 rounded-[50%] flex items-center justify-center"
+          >
+            0
+            <img
+              src="./images/basket.svg"
+              alt="Basket icon"
+              width="25"
+              height="25"
+            />
+          </button>
+          <button
+            class="w-[50px] h-[50px] border-[2px] border-[#1C274C] text-[#1C274C] rounded-[50%] flex items-center justify-center"
+          >
+            <img
+              src="./images/mode.svg"
+              alt="Mode icon"
+              width="25"
+              heigh="25"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="py-5 shadow-md">
+        <div class="container mx-auto">
+          <div class="flex items-center justify-between">
+            <input
+              class="search-input p-3 rounded-[10px] border-[1px] w-[250px] border-slate-500"
+              type="text"
+              placeholder="Searching..."
+            />
+            <select
+              class="country-select p-3 rounded-[10px] border-[1px] w-[250px] border-slate-500"
+            >
+              <option>All</option>
+            </select>
+          </div>
+          <ul
+            class="countries-list flex flex-wrap justify-between gap-3 mt-8"
+          ></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="./countrys.js"></script>
+    <script src="./main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
